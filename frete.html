@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de frete</title>
+    <style>
+        body {
+            background-color: darkgray;
+            color: black;
+            text-align: center;
+            border: 2px currentColor;
+        }
+        apagar {
+            color: red;
+
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Digite quantas toneladas o motorista levou:</label>
+        <input type="text" name="pesoc" />
+        <br />
+        <label>Digite o valor fixo por tonelada:</label>
+        <input type="text" name="valorf" />
+        <br />
+        <label>Digite o valor fixo por KM:</label>
+        <input type="text" name="distp" />
+        <br />
+        <label>Digite o total de KMs percorridos:</label>
+        <input type="text" name="valorf" />
+        <br />
+               <br />
+        <button type="submit">Calcular</button>
+      </form>
+      <div id="result">
+        <!-- Resultado da calculadora será exibido aqui -->
+      </div>
+    
+<script>
+    print(' == Calculadora de frete == ')
+    pesoc = float(input('Digite quantas toneladas o motorista levou: '))
+    valorf = float(input('Digite o valor fixo por tonelada: '))
+    dieselg = float(input('Digite o total de KMs percorridos: '))
+    distp = float(input('Digite o preço por KM: '))
+    totall = pesoc * valorf
+    totald = dieselg * distp
+    print('O total foi de R${:.2f}!'.format(totall))
+    print('O gasto total em Diesel foi de {:.2f}'.format(totald))
+    apagar = totall - totald
+    print('Com o desconto do Diesel, voce deverá pagar a quantia de {} ao motorista.'.format(apagar))
+</script>
+  <div id="apagar">apagar</div>
+</body>
+</html>
